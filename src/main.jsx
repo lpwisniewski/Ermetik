@@ -4,6 +4,7 @@ import './styles/main'
 
 import { h, render, Component } from 'preact';
 import { Router, hashHistory } from 'preact-router'
+import MessageFlux from './components/Message';
 
 class TchatApp extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class TchatApp extends Component {
   render() {
     return (
       <main>
-        <MsgFlux msgs={this.state.msgs} />
+        <MessageFlux msgs={this.state.msgs} />
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} value={this.state.text} placeholder="Message..." />
           <button>Envoyer</button>
@@ -43,21 +44,7 @@ class TchatApp extends Component {
   }
 }
 
-class MsgFlux extends Component {
-  render() {
-    return (
-      <ul>
-        {this.props.msgs.map(msg => (
-          <li>
-            <span class="author">{msg.author}: </span>
-            <span class="date">{msg.date}</span>
-            <span>{msg.text}</span>
-          </li>
-        ))}
-      </ul>
-    );
-  }
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector('[role=application]')
