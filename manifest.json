@@ -1,7 +1,7 @@
 {
   "name": "Ermetik",
   "short_name": "Ermetik",
-  "start_url": "/Ermetik",
+  "start_url": "/Ermetik/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
