@@ -1,0 +1,16 @@
+.message {
+  margin-bottom: .7em;
+  word-break: break-all;
+}
+
+.message .author {
+  color: #3f6da7;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.message .date {
+  float: right;
+  color: #3f6da7;
+  font-style: italic;
+}
